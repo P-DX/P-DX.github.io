@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFAWC</title>
+    <style>
+
+        body { font-family: Arial, sans-serif; }
+        header, footer { background-color: #f8f9fa; text-align: center; padding: 20px 0; }
+        nav ul { list-style-type: none; padding: 0; text-align: center; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { text-decoration: none; color: #007bff; }
+        .container { width: 80%; margin: 20px auto; }
+        .section { margin-bottom: 20px; }
+        .section h2 { color: #007bff; }
+        .footer { font-size: 0.8em; }
+        .author-link {
+            font-size: 25px; /*-large; /* Increase font size */
+            text-decoration: none; /* Remove underline */
+            /* margin-right: 50px; */
+        }
+
+        .author-container {
+            display: inline-block; /* Make the container inline-block */
+            margin-right: 20px; /* Add spacing between authors */
+            position: relative; /* Needed for absolute positioning of the badge */
+            margin-right: 50px;
+        }
+
+        .author-badge {
+            position: absolute;
+            top: 1px;
+            right:-6px;
+            /* background-color: red; */
+            color: black;
+            font-size: 15px;
+            padding: 2px 5px;
+            border-radius: 50%;
+            transform: translate(50%, -30%); /* Center the badge on the top right corner */
+            /* margin-right: 20px; */
+        }
+
+        .author-affiliation {
+            display: block; /* Make the affiliation appear on a new line */
+            font-size: 20px; /* Smaller font size for affiliation */
+        }
+        
+        .affiliation {
+            font-size: 24px;
+        }
+
+        .statement{
+            font-size: 20px;
+        }
+
+        .statement_link{
+            font-size: 20px;
+        }
+
+        hr {
+			border: 0;
+			height: 1px;
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		}
+        #structure pre {
+            font-size: 18px; /* Adjusts the font size to be larger */
+        }
+        #citation pre {
+            font-size: 16px; /* Adjusts the font size to be larger */
+        }
+
+        #contact p, #contact h2 {
+        font-size: 18px; /* This will increase the font size */
+        }
+
+        #contact a {
+            font-size: 18px; /* Adjusts the font size of the link to be larger, too */
+        }
+
+        body {
+        font-family: Arial, sans-serif;
+    }
+    header, footer {
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px 0;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #007bff;
+    }
+    .container {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .section h2 {
+        color: #007bff;
+    }
+    .section-content {
+        padding-left: 80px; /* Adjust left content padding */
+        padding-right: 80px; /* Adjust right content padding */
+    }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FIFAWC: A Dataset with Detailed Annotation and <br> Rich Semantics for Group Activity Recognition</h1>
+
+        <p>
+            <span class="author-container">
+                <a href="" class="author-link">Duoxuan Pei</a>
+                <!-- <span class="author-badge">1</span> -->
+            </span>
+            <span class="author-container">
+                <a href="https://irip.buaa.edu.cn/dihuang/index.html" class="author-link">Di Huang</a>
+                <!-- <span class="author-badge">1</span> -->
+            </span>
+            <span class="author-container">
+                <a href="https://irip.buaa.edu.cn/yhwang/index.html" class="author-link">Yunhong Wang</a>
+                <!-- <span class="author-badge">1</span> -->
+            </span>
+        </p>
+
+        <div class="affiliations">
+            <p class="affiliation">Beihang University</p>
+        </div>
+<!-- 
+        <p><a href="" class="author-link">Duoxuan Pei</a>
+            <a href="https://irip.buaa.edu.cn/dihuang/index.html" class="author-link">Di Huang</a>
+             <a href="https://irip.buaa.edu.cn/yhwang/index.html" class="author-link">Yunhong Wang</a>
+        </p> -->
+        
+        
+
+        <nav>
+            <ul>
+                <li><a href="#overview" style="font-size:22px">Overview</a></li>
+                <li><a href="#examples" style="font-size:22px">Examples</a></li>
+                <li><a href="#structure" style="font-size:22px">Structure</a></li>
+                <li><a href="#citation" style="font-size:22px">Citation</a></li>
+                <li><a href="#contact" style="font-size:22px">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        <section id="overview">
+            <h2>Overview</h2>
+            <div class="section-content">
+            <span class="statement">
+                <p>
+                    We collect 2,198 soccer video clips from 2018 World Cup with match commentary from Hupu forum. Each clip is annotated across multiple categories, totaling 12 distinct classes. 1,458 clips are designated for training and 740 for testing. We employ Mask R-CNN to detect persons for detector-based GAR methods and extract C3D features video captioning. The train-test split of this dataset is performed at video level, rather than at frame level.
+                </p>
+                <p>
+                    Download links: <a href="https://pan.baidu.com/s/1cWgMHvwi-2cooJj7dI0wLA" class="statement_link">Baidu Cloud</a> or <a href="https://google.com" class="statement_link">Google Drive</a>. Limited by the copyright, this dataset is available upon request and only for academic research. Please contact me by email (peidx _at_ buaa.edu.cn).
+                </p>
+                
+            </span>
+            </div>
+        </section>
+        <hr>
+        </section>
+
+        <section id="examples">
+            <h2>Examples</h2>
+            <div class="section-content">
+                <div style="display: flex; align-items: center;">
+                    <div style="flex: 0 0 auto; padding-right: 20px;">
+                        <center>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/1.gif" width="350px"></a>
+                            <!-- <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a> -->
+                        </center>
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="statement">
+                            Captions: In the 17th minute, Valcenias broke off Carrasco's ball on the right in front of the field and tried to get rid of Vertonghen, Vertonghen's tall horse was pulled down by Balcenias.
+                            <br><br>
+                            Group Acitivities: Player; Contest
+                        </span>
+                    </div>
+                </div>
+
+                <br>
+                <div style="display: flex; align-items: center;">
+                    <div style="flex: 0 0 auto; padding-right: 20px;">
+                        <center>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/2.gif" width="350px"></a>
+                            <!-- <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a> -->
+                        </center>
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="statement">
+                            Captions: In the 37th minute, Munye forward right field pass, Azar turned into the right foot in the box, the ball was Pagnedo Shenyong out of the bottom line.
+                            <br><br>
+                            Group Acitivities: Player; Contest; Shoot
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex; align-items: center;">
+                    <div style="flex: 0 0 auto; padding-right: 20px;">
+                        <center>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/3.gif" width="350px"></a>
+                            <!-- <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a> -->
+                        </center>
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="statement">
+                            Captions: In the 81st minute, Munieh forward with the ball across the right field, the front of the Mertens penalty area to return the ball to knock, Lukaku forward the ball left foot straight plug, the right side of the Mertens penalty area to cross the ball, Munieh turned his heel shot, the ball was Paniedo threw out. The referee signaled that Lukaku pass a moment, Mertens offside.
+                            <br><br>
+                            Group Acitivities: Player; Contest; Foul; Shoot
+                        </span>
+                    </div>
+                </div>
+                
+                <br>
+                <div style="display: flex; align-items: center;">
+                    <div style="flex: 0 0 auto; padding-right: 20px;">
+                        <center>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/4.gif" width="350px"></a>
+                            <!-- <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a>
+                            <a><img class="rounded" src="./FIFAWC_GIFs/8.gif" width="350px"></a> -->
+                        </center>
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="statement">
+                            Captions: Although the score was behind, the Panamanian fans in the stands were very happy.
+                            <br><br>
+                            Group Acitivities: Spectator; Spectate; Celebrate
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+        
+        <section id="structure">
+            <h2>Structure</h2>
+            <pre>
+        .\                                                             ......Path of FIFAWC
+        |--- srcs                                                      ......Original file path
+                |--- 6-14-Russia-Saudi-5-0                             ......Parent path for a single match
+                |--- ├── 0.jpg                                      ......"*.jpg" usually represents an overview of the entire match
+                |--- ├── 1.gif                                      ......"*.gif" represents different video clips of the match
+                |--- ├── gif-record.txt                             ......"gif-record.txt" contains the original Chinese captions of different video clips
+                |--- |--- 1                                            ......Path corresponding to 1.gif
+                |--- |--- ├── 000000.jpg                            ......Frame 0 of 1.gif (in jpg format)
+                |--- |--- ├── 000000.png                            ......Frame 0 of 1.gif (in png format)
+                |--- |--- ├── 000001.fc6-1                          ......C3D features (fc6 layer) of Frame 0 and the next 15 frames of 1.gif
+                |--- |--- ├── 000001.fc7-1                          ......C3D features (fc7 layer) of Frame 0 and the next 15 frames of 1.gif
+                |--- |--- ├── 000001.prob                           ......C3D outputs of Frame 0 and the next 15 frames of 1.gif
+        |--- captions_new                                              ......Path for English captions
+                ├── 6-14-Russia-Saudi-5-0.json                      ......Contains English captions of all clips for the corresponding match
+        |--- csvs_new                                                  ......Path for multi-group activity categories
+                ├── 6-14-Russia-Saudi-5-0.csv                       ......Contains multi-group activity categories for all clips of the corresponding match
+        |--- fwc_det                                                   ......Path for human detection boxes in images
+                |--- 6-14-Russia-Saudi-5-0                             ......Path for the corresponding match
+                |--- ├── 1.txt                                      ......Detection results for video clips in the corresponding match
+        ├── test_num.txt                                            ......List of test samples
+        ├── train_num.txt                                           ......List of training samples
+            </pre>
+        </section>
+        <hr>
+
+        <section id="citation">
+            <h2>Citation</h2>
+            <pre>
+        In case using our FIFAWC dataset or wish to refer to the baseline results, please cite the following publications.
+        @article{pei2024FIFAWC,
+            author       = {Pei, Duoxuan and Huang, Di and Wang, Yunhong},
+            title        = {FIFAWC: A Dataset with Detailed Annotation and Rich Semantics for Group Activity Recognition},
+            journal      = {Frontiers of Computer Science},
+            year         = {2024},
+        }
+        @article{PeiHKW23,
+            author       = {Duoxuan Pei and Di Huang and Longteng Kong and Yunhong Wang},
+            title        = {Key Role Guided Transformer for Group Activity Recognition},
+            journal      = {{IEEE} Trans. Circuits Syst. Video Technol.},
+            volume       = {33},
+            number       = {12},
+            pages        = {7803--7818},
+            year         = {2023},
+        }
+        @inproceedings{PeiLW21,
+            author       = {Duoxuan Pei and Annan Li and Yunhong Wang},
+            title        = {Group Activity Recognition by Exploiting Position Distribution and Appearance Relation},
+            booktitle    = {MultiMedia Modeling - 27th International Conference},
+            volume       = {12572},
+            pages        = {123--135},
+            year         = {2021},
+        }
+            </pre>
+        </section>
+        <hr>
+
+        <section id="contact" >
+            <h2 >Contact</h2>
+            <div class="section-content">
+                <p >For more information, please contact us at <a href="mailto:peidx@buaa.edu.cn">peidx@buaa.edu.cn</a>.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p class="footer" >© 2024 Project FIFAWC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
